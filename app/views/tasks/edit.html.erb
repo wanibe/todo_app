@@ -1,0 +1,22 @@
+<h1>TODO 編集</h1>
+<%= form_with model: @task do |f| %>
+    <% if @task.errors.any? %>
+        <ul>
+            <% @task.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+        </ul>
+    <% end %>
+    <div>
+        <%= f.label :title, "タイトル" %><br>
+        <%= f.text_field :title %>
+    </div>
+    <div>
+        <%= f.label :body, "内容" %><br>
+        <%= f.text_area :body %>
+    </div>
+    <%= f.submit %>
+<% end %>
+<div style="margin: 20px 0px">
+    <%= link_to '戻る', tasks_path %>
+</div>
