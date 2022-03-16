@@ -1,0 +1,14 @@
+<h1>TODO 一覧</h1>
+<div style="margin: 40px 0px">
+    <%= link_to '新規作成', new_task_path %>
+</div>
+
+<table style="table-layout: fixed">
+    <% @tasks.each do |t| %>
+        <tr>
+            <td style=" width: 250px"><%= link_to t.title, t %></td>
+            <td><%= link_to '編集', edit_task_path(t) %>
+            <td><%= link_to '削除', task_path(t), method: :delete %></td>
+        </tr>
+    <% end %>
+</table>
