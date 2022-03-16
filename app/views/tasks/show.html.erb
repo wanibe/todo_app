@@ -1,14 +1,16 @@
-<h1>TODO詳細</h1>
+<h1>TODO 詳細</h1>
 
-<h2>タイトル</h2>
+<h2 style="margin-top: 50px">タイトル</h2>
 <p><%= @task.title %></p>
 
 <h3>内容</h3>
 <p><%= @task.body %></p>
 
-<div>
+<div style="margin-top: 50px">
     <%= link_to '編集', edit_task_path(@task) %>
-    <%= link_to '削除', task_path(@task), method: :delete %>
+</div>
+<div style="margin: 20px 0px">
+    <%= button_to '削除', task_path(@task), method: :delete %>
 </div>
 
 <div style="margin: 20px 0">

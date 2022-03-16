@@ -8,7 +8,7 @@
         <tr>
             <td style=" width: 250px"><%= link_to t.title, t %></td>
             <td><%= link_to '編集', edit_task_path(t) %>
-            <td><%= link_to '削除', task_path(t), method: :delete %></td>
+            <td><%= button_to '削除', task_path(t), method: :delete %></td>
         </tr>
     <% end %>
 </table>
